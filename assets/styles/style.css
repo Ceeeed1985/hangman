@@ -1,0 +1,95 @@
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: white;
+    margin-top: 50px;
+}
+
+header {
+    margin-bottom: 25px;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.leJeu {
+    width: 60%;
+    margin: auto;
+}
+
+
+
+.plateforme {
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+}
+
+.lePendu{
+    width: 25%;
+}
+
+.ecranDeJeu{
+    background-color: #1f1e1e;
+    width: 50%;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    padding-top: 100px;
+    font-size: 36px;
+}
+
+.decompte{
+    width: 25%;
+}
+
+.clavier{
+    width: 60%;
+    text-align: center;
+    margin: auto;
+    padding-top: 25px;
+}
+
+.ligneClavier {
+    display: flex;
+    justify-content: center;
+    gap:5px;
+    padding-bottom: 5px; 
+}
+
+.trait{
+    border-bottom: 1px white solid;
+}
+
+img {
+    width: 100%;
+    border: 1px solid grey;
+    border-radius: 15px;
+    box-shadow: 3px 3px 15px 1px;
+}
+
+button{
+    padding: 10px;
+    min-width: 50px;
+    background-color: white;
+    border: 1px solid grey;
+    border-radius: 5px;
+    font-size: 36px;
+}
+
+button:hover{
+    background-color: #e5e5dc;
+}
+
+#clear {
+    width: 105px;
+}
+#delete {
+    width: 105px;
+}
+#confirmer {
+    width:550px;
+}

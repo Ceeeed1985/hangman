@@ -10,10 +10,7 @@
     <script src="assets/scripts/main.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Le jeu du pendu</h1>
-        <p>Trouve le mot avant de finir pendu !</p>
-    </header>
+
 
     <section class="leJeu">
         <section class="plateforme">
@@ -21,14 +18,18 @@
                 <img src="assets/pictures/carte_hangman_00.png" alt="photo_hangman">
             </article>
             <article class="ecranDeJeu">
-                <article class="motCache">Mot</article>
+                <article class="motCache"><span class="trait">L</span> <span class="trait">E</span><br>
+                    <span class="trait"> J</span> <span class="trait">E</span> <span class="trait">U</span><br>
+                    <span class="trait">D</span> <span class="trait">U</span><br>
+                    <span class="trait">P</span> <span class="trait">E</span> <span class="trait">N</span> <span class="trait">D</span> <span class="trait">U</span>
+                </article>
             </article>
             <article class="decompte">
-                <img src="" alt="">
+                <img src="assets/pictures/carte_count_6.png" alt="">
             </article>
         </section>
         <section class="clavier">
-            <section class="ligne1">
+            <section class="ligneClavier">
                 <button id="touchesClavier">A</button>
                 <button id="touchesClavier">Z</button>
                 <button id="touchesClavier">E</button>
@@ -40,7 +41,7 @@
                 <button id="touchesClavier">O</button>
                 <button id="touchesClavier">P</button>
             </section>
-            <section class="ligne2">
+            <section class="ligneClavier">
                 <button id="touchesClavier">Q</button>
                 <button id="touchesClavier">S</button>
                 <button id="touchesClavier">D</button>
@@ -52,18 +53,18 @@
                 <button id="touchesClavier">L</button>
                 <button id="touchesClavier">M</button>
             </section>
-            <section class="ligne3">
-                <button id="touchesClavier">Clear All</button>
+            <section class="ligneClavier">
+                <button id="clear">Clear</button>
                 <button id="touchesClavier">W</button>
                 <button id="touchesClavier">X</button>
                 <button id="touchesClavier">C</button>
                 <button id="touchesClavier">V</button>
                 <button id="touchesClavier">B</button>
                 <button id="touchesClavier">N</button>
-                <button id="touchesClavier">Delete</button>
+                <button id="delete">Del</button>
             </section>
-            <section class="ligne4">
-                <button id="touchesClavier">Confirmer</button>
+            <section class="ligneClavier">
+                <button id="confirmer">Confirmer</button>
             </section>
         </section>
 
