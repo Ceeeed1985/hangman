@@ -1,11 +1,28 @@
+/////////////////////////////////////////////////////////////
+////////////////// MES FONTIONS /////////////////////////////
+/////////////////////////////////////////////////////////////
+
+
+// TROUVER UN MOT DANS UN TABLEAU
+
 function trouverUnMot(array) {
     if (array.length === 0){
         return null;
     }
     const indexAleatoire = Math.floor(Math.random() * array.length);
     return array[indexAleatoire];
-}
+};
 
+// DECOMPOSER UN MOT EN LETTRES
+function splitMot (mot) {
+    let motEnLettre = mot.split('');
+    return motEnLettre;
+};
+
+
+/////////////////////////////////////////////////////////////
+////////////////// MES VARIABLES/////////////////////////////
+/////////////////////////////////////////////////////////////
 
 const filmAleatoire = trouverUnMot(listeFilms);
 const personnageAleatoire = trouverUnMot(listePersonnages);
@@ -13,20 +30,22 @@ const animalAleatoire = trouverUnMot(listeAnimaux);
 const motAleatoire = trouverUnMot(listeMots);
 const verbeAleatoire = trouverUnMot(listeVerbes);
 
-console.log(filmAleatoire);
-console.log(personnageAleatoire);
-console.log(animalAleatoire);
-console.log(motAleatoire);
-console.log(verbeAleatoire);
-
-
-
 
 let boutonFilms = "Liste de films";
 let boutonPersonnages = "Liste de personnages";
 let boutonMots = "Liste de mots";
 let boutonVerbes = "Liste de verbes";
 let boutonAnimaux = "Liste d'animaux";
+
+
+// let filmEnLettres = splitMot(filmAleatoire);
+// let personnageEnLettres = splitMot(personnageAleatoire);
+// let animalEnLettres = splitMot(animalAleatoire);
+// let motEnLettres = splitMot(motAleatoire);
+// let verbeEnLettres = splitMot(verbeAleatoire);
+
+
+
 
 
 let boutonStart = document.getElementById("start");
@@ -74,3 +93,16 @@ boutonStart.addEventListener("click", () => {
     })
 });
 
+// let chargerLaListe = null;
+// let listeAleatoire = null;
+// let boutonListe = null;
+// function chargerListes (boutonListe, chargerLaListe, listeAleatoire){
+//     document.getElementById(boutonListe).addEventListener("click", () => {
+//         chargerLaListe = document.getElementById("ecranDeJeu");
+//         chargerLaListe.innerHTML = `
+//         <h3>${listeAleatoire}</h3>
+//         `
+//     });
+// };
+
+// console.log(chargerListes(boutonFilms, chargerListeFilms, filmAleatoire));

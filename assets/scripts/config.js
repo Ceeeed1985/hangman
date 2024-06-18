@@ -4,3 +4,4 @@ const listeMots = ["ordinateur", "television", "frigo", "restaurant", "maison", 
 const listeVerbes = ["manger", "dessiner", "peindre", "construire", "conduire", "jouer", "garder", "reproduire", "disparaitre", "boire", "avancer", "reculer", "entendre", "encourager", "pouvoir"];
 const listeAnimaux = ["chat", "baleine", "ecureuil", "renard", "loup", "tigre", "belette", "kangourou", "souris", "canard", "ours", "aigle", "panthere", "velociraptor", "mammouth"]
 
+
