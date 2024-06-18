@@ -7,6 +7,7 @@
 body{
     background-color: white;
     margin-top: 50px;
+    font-family: 'roboto', 'sans-serif';
 }
 
 header {
@@ -14,6 +15,11 @@ header {
     text-align: center;
     padding: 15px 0;
 }
+
+h2{
+font-size: 24px;
+}
+
 
 .leJeu {
     width: 60%;
@@ -38,8 +44,12 @@ header {
     border-radius: 10px;
     color: white;
     text-align: center;
-    padding-top: 100px;
+    padding : 15px;
     font-size: 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-around;
 }
 
 .decompte{
@@ -64,6 +74,19 @@ header {
     border-bottom: 1px white solid;
 }
 
+.start {
+    margin-top: 25px;
+    border: #2a9d8f 2px solid;
+    border-radius: 15px;
+    color: #2a9d8f;
+}
+
+.start:hover{
+    background-color: #2a9d8f;
+    color: white;
+    border: 2px white solid;
+}
+
 img {
     width: 100%;
     border: 1px solid grey;
@@ -71,18 +94,7 @@ img {
     box-shadow: 3px 3px 15px 1px;
 }
 
-button{
-    padding: 10px;
-    min-width: 50px;
-    background-color: white;
-    border: 1px solid grey;
-    border-radius: 5px;
-    font-size: 36px;
-}
 
-button:hover{
-    background-color: #e5e5dc;
-}
 
 #clear {
     width: 105px;

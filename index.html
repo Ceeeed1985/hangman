@@ -5,9 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Le jeu du pendu</title>
     <link rel="stylesheet" href="assets/styles/style.css">
-    <script src="assets/scripts/config.js"></script>
-    <script src="assets/scripts/script.js"></script>
-    <script src="assets/scripts/main.js"></script>
+    <link rel="stylesheet" href="assets/styles/buttons.css">
+    <script src="assets/scripts/config.js" defer></script>
+    <script src="assets/scripts/script.js" defer></script>
+    <script src="assets/scripts/main.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -17,12 +21,13 @@
             <article class="lePendu">
                 <img src="assets/pictures/carte_hangman_00.png" alt="photo_hangman">
             </article>
-            <article class="ecranDeJeu">
+            <article id="ecranDeJeu" class="ecranDeJeu">
                 <article class="motCache"><span class="trait">L</span> <span class="trait">E</span><br>
                     <span class="trait"> J</span> <span class="trait">E</span> <span class="trait">U</span><br>
                     <span class="trait">D</span> <span class="trait">U</span><br>
                     <span class="trait">P</span> <span class="trait">E</span> <span class="trait">N</span> <span class="trait">D</span> <span class="trait">U</span>
                 </article>
+                <button id="start" class="start">Nouvelle partie</button>
             </article>
             <article class="decompte">
                 <img src="assets/pictures/carte_count_6.png" alt="">
