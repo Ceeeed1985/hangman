@@ -14,10 +14,9 @@ function trouverUnMot(array) {
 };
 
 // DECOMPOSER UN MOT EN LETTRES
-function splitMot (mot) {
-    let motEnLettre = mot.split('');
-    return motEnLettre;
-};
+// function splitMot (mot) {
+//     return mot.split('');
+// };
 
 
 /////////////////////////////////////////////////////////////
@@ -38,7 +37,7 @@ let boutonVerbes = "Liste de verbes";
 let boutonAnimaux = "Liste d'animaux";
 
 
-// let filmEnLettres = splitMot(filmAleatoire);
+// let filmEnLettres = splitFilm(filmAleatoire);
 // let personnageEnLettres = splitMot(personnageAleatoire);
 // let animalEnLettres = splitMot(animalAleatoire);
 // let motEnLettres = splitMot(motAleatoire);
@@ -64,45 +63,58 @@ boutonStart.addEventListener("click", () => {
     document.getElementById("btnListeFilms").addEventListener("click", () => {
         let chargerListeFilms = document.getElementById("ecranDeJeu");
         chargerListeFilms.innerHTML = `
-        <h3>${filmAleatoire}</h3>
+        <h3 class="motCache">${filmAleatoire}</h3>
         `
     })
     document.getElementById("btnListePersonnages").addEventListener("click", () => {
         let chargerListePersonnages = document.getElementById("ecranDeJeu");
         chargerListePersonnages.innerHTML = `
-        <h3>${personnageAleatoire}</h3>
+        <h3 class="motCache">${personnageAleatoire}</h3>
         `
     })
     document.getElementById("btnListeAnimaux").addEventListener("click", () => {
         let chargerListeAnimaux = document.getElementById("ecranDeJeu");
         chargerListeAnimaux.innerHTML = `
-        <h3>${animalAleatoire}</h3>
+        <h3 class="motCache">${animalAleatoire}</h3>
         `
     })
     document.getElementById("btnListeMots").addEventListener("click", () => {
         let chargerListeMots = document.getElementById("ecranDeJeu");
         chargerListeMots.innerHTML = `
-        <h3>${motAleatoire}</h3>
+        <h3 class="motCache">${motAleatoire}</h3>
         `
     })
     document.getElementById("btnListeVerbes").addEventListener("click", () => {
         let chargerListeVerbes = document.getElementById("ecranDeJeu");
         chargerListeVerbes.innerHTML = `
-        <h3>${verbeAleatoire}</h3>
+        <h3 class="motCache">${verbeAleatoire}</h3>
         `
     })
+
+
+
+    const lettres = document.querySelectorAll('.touchesClavier');
+    let motAffiche = document.querySelector('motCache');
+    console.log(motAffiche);
+
+
+    lettres.forEach(lettre => {
+        lettre.addEventListener('click', () => {
+            const lettreActive = lettre.textContent;
+            console.log(lettreActive)
+
+            if(filmAleatoire.includes(lettreActive)) {
+                lettre.classList.add('succes')
+                lettre.setAttribute('disabled', 'true')
+                
+            } else {
+                lettre.classList.add('missed')
+                lettre.setAttribute('disabled', 'true')
+            }
+
+            
+        })
+    })
+
 });
 
-// let chargerLaListe = null;
-// let listeAleatoire = null;
-// let boutonListe = null;
-// function chargerListes (boutonListe, chargerLaListe, listeAleatoire){
-//     document.getElementById(boutonListe).addEventListener("click", () => {
-//         chargerLaListe = document.getElementById("ecranDeJeu");
-//         chargerLaListe.innerHTML = `
-//         <h3>${listeAleatoire}</h3>
-//         `
-//     });
-// };
-
-// console.log(chargerListes(boutonFilms, chargerListeFilms, filmAleatoire));
