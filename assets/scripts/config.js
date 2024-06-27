@@ -1,7 +1,58 @@
-const listeFilms = ["alien", "starwars", "batman", "gladiator", "insidious", "avatar", "titanic", "terminator", "robocop", "matrix", "halloween", "conjuring"];
-const listePersonnages = ["mickey", "songoku", "vegeta", "trunks", "minnie", "donald", "dingo", "scoobydoo", "alf", "freddy", "superman", "chucky", "parzival", "columbo", "gandalf" ];
-const listeMots = ["ordinateur", "television", "frigo", "restaurant", "maison", "bateau", "brocoli", "salade", "feuille", "pochette", "tasse", "colier", "armoire", "piano", "violon"];
-const listeVerbes = ["manger", "dessiner", "peindre", "construire", "conduire", "jouer", "garder", "reproduire", "disparaitre", "boire", "avancer", "reculer", "entendre", "encourager", "pouvoir"];
-const listeAnimaux = ["chat", "baleine", "ecureuil", "renard", "loup", "tigre", "belette", "kangourou", "souris", "canard", "ours", "aigle", "panthere", "velociraptor", "mammouth"]
+// const listeFilms = ["alien", "starwars", "batman", "gladiator", "insidious", "avatar", "titanic", "terminator", "robocop", "matrix", "halloween", "conjuring"];
+// const listePersonnages = ["mickey", "songoku", "vegeta", "trunks", "minnie", "donald", "dingo", "scoobydoo", "alf", "freddy", "superman", "chucky", "parzival", "columbo", "gandalf" ];
+// const listeMots = ["ordinateur", "television", "frigo", "restaurant", "maison", "bateau", "brocoli", "salade", "feuille", "pochette", "tasse", "colier", "armoire", "piano", "violon"];
+// const listeVerbes = ["manger", "dessiner", "peindre", "construire", "conduire", "jouer", "garder", "reproduire", "disparaitre", "boire", "avancer", "reculer", "entendre", "encourager", "pouvoir"];
+// const listeAnimaux = ["chat", "baleine", "ecureuil", "renard", "loup", "tigre", "belette", "kangourou", "souris", "canard", "ours", "aigle", "panthere", "velociraptor", "mammouth"]
 
 
+const movieList = [
+    "alien",
+    "starwars",
+    "batman",
+    "gladiator",
+    "insidious",
+    "avatar",
+    "titanic",
+    "terminator",
+    "robocop",
+    "matrix",
+    "halloween",
+    "conjuring",
+    "Avatar",
+    "Braveheart",
+    "Casino",
+    "Chocolat",
+    "Crash",
+    "Django",
+    "Drive",
+    "Dune",
+    "Everest",
+    "Fargo",
+    "Gladiator",
+    "Gravity",
+    "Gremlins",
+    "Hamlet",
+    "Heat",
+    "Hitch",
+    "Inception",
+    "Interstellar",
+    "Jaws",
+    "Joker",
+    "Lincoln",
+    "Logan",
+    "Madagascar",
+    "Memento",
+    "Parasite",
+    "Platoon",
+    "Pocahontas",
+    "Ratatouille",
+    "Rebecca",
+    "Scarface",
+    "Shrek",
+    "Skyfall",
+    "Spartacus",
+    "Spectre",
+    "Taxi",
+    "Top",
+    "Troy",
+];

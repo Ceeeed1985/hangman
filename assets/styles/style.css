@@ -8,80 +8,134 @@ body{
     background-color: white;
     margin-top: 50px;
     font-family: 'roboto', 'sans-serif';
+    height: 100vh;
 }
 
-header {
-    margin-bottom: 25px;
-    text-align: center;
-    padding: 15px 0;
-}
-
-h2{
-font-size: 24px;
-}
-
-h3{
-    font-size: 36px;
-    letter-spacing: 12px;
-}
-
-.leJeu {
-    width: 60%;
+.leJeu{
+    width: 1024px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     margin: auto;
 }
 
-
-.plateforme {
+.display{
+    width: 100%;
+    height: 500px;
+    border: 0px solid black;
+    border-radius: 10px;
+    background-color: #1f1e1e;
+    color: white;
+    margin-bottom: 25px;
     display: flex;
-    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.control{
+    width: 100%;
+    display: flex;
     justify-content: space-between;
 }
 
-.lePendu{
-    width: 25%;
+.clavier{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top : 20px;
+    padding-bottom: 20px;
 }
 
-.ecranDeJeu{
-    background-color: #1f1e1e;
-    width: 50%;
-    border-radius: 10px;
-    color: white;
-    text-align: center;
-    padding : 15px;
+.touchesClavier{
+    margin: 0 1px;
+    width: 5%;
+}
+
+.delete {
+    width: 19%;
+}
+
+.clear {
+    width:19%;
+}
+
+button{
+    padding: 10px;
+    min-width: 9%;
+    background-color: white;
+    border: 1px solid grey;
+    border-radius: 5px;
     font-size: 36px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    justify-content: space-around;
+}
+
+button:hover{
+    background-color: #e5e5dc;
+}
+
+.missed {
+    background-color: #e76f51;
+    color: white;
+}
+
+
+.success {
+    background-color: #2a9d8f;
+    color: white;
+}
+
+
+
+.cartePendu{
+    width: 20%;$
 }
 
 .decompte{
-    width: 25%;
-}
-
-.clavier{
-    width: 60%;
-    text-align: center;
-    margin: auto;
-    padding-top: 25px;
-}
-
-.ligneClavier {
+    width: 20%;
+    height: 100%;
     display: flex;
-    justify-content: center;
-    gap:5px;
-    padding-bottom: 5px; 
+    flex-direction: column;
+    border: 1px solid #1f1e1e;
+    border-radius: 15px;
+    box-shadow: 3px 3px 15px 1px;
+
 }
 
-.trait{
-    border-bottom: 1px white solid;
+.decompte{
+    display:flex;
+    justify-content: center;
+    align-self: center;
+    color: #2a9d8f;
 }
+
+#count{
+    font-size: 10em;
+    align-items: center;
+    text-align: center;
+    /* margin:auto; */
+}
+
+#coeur1{
+    font-size: 3em;
+    margin-left: 10px;
+    text-align: left;
+}
+
+#coeur2{
+    font-size: 3em;
+    margin-right: 10px;
+    text-align: right
+};
+
+
+
 
 .start {
-    margin-top: 25px;
     border: #2a9d8f 2px solid;
     border-radius: 15px;
     color: #2a9d8f;
+    width: 100%;
 }
 
 .start:hover{
@@ -98,17 +152,26 @@ img {
 }
 
 
+.hiddenWord{
+    color: white;
+    font-size: 3em;
+    letter-spacing: 0.8em;
+    line-height: 3em;
+    text-align: center;
+    padding : 1em;
+    text-transform: uppercase;
+    text-decoration: solid;
+}
 
-#clear {
-    width: 105px;
-}
-#delete {
-    width: 105px;
-}
-#confirmer {
-    width:550px;
+h1{
+    font-size: 48px;
 }
 
-.highlight {
-    color : red;
-}
+h2{
+    font-size: 24px;
+    }
+    
+h3{
+    font-size: 36px;
+    letter-spacing: 12px;
+    }
