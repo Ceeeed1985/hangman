@@ -72,6 +72,7 @@ buttons.forEach(button =>{
                     tableauScoreElement.classList.add("decompte4");
                     break;
                 case 3:
+                    cartePenduElement.src = "assets/pictures/carte_count_3.png";
                     tableauScoreElement.classList.add("decompte3");
                     break;
                 case 2:
