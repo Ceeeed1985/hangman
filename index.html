@@ -6,73 +6,63 @@
     <title>Le jeu du pendu</title>
     <link rel="stylesheet" href="assets/styles/style.css">
     <link rel="stylesheet" href="assets/styles/buttons.css">
-    <script src="assets/scripts/config.js" defer></script>
-    <script src="assets/scripts/script.js" defer></script>
-    <script src="assets/scripts/main.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
 
-
     <section class="leJeu">
-        <section class="plateforme">
-            <article class="lePendu">
-                <img src="assets/pictures/carte_hangman_00.png" alt="photo_hangman">
-            </article>
-            <article id="ecranDeJeu" class="ecranDeJeu">
-                <article class="motCache"><span class="trait">L</span> <span class="trait">E</span><br>
-                    <span class="trait"> J</span> <span class="trait">E</span> <span class="trait">U</span><br>
-                    <span class="trait">D</span> <span class="trait">U</span><br>
-                    <span class="trait">P</span> <span class="trait">E</span> <span class="trait">N</span> <span class="trait">D</span> <span class="trait">U</span>
-                </article>
-                <button id="start" class="start">Nouvelle partie</button>
-            </article>
-            <article class="decompte">
-                <img src="assets/pictures/carte_count_6.png" alt="">
-            </article>
+        <section id="display" class="display">
+                <article id="hiddenWord">Le jeu du pendu</article>     
         </section>
-        <section class="clavier">
-            <section class="ligneClavier">
-                <button class="touchesClavier">A</button>
-                <button class="touchesClavier">Z</button>
-                <button class="touchesClavier">E</button>
-                <button class="touchesClavier">R</button>
-                <button class="touchesClavier">T</button>
-                <button class="touchesClavier">Y</button>
-                <button class="touchesClavier">U</button>
-                <button class="touchesClavier">I</button>
-                <button class="touchesClavier">O</button>
-                <button class="touchesClavier">P</button>
+
+        <section class="control">
+            <section class="cartePendu">
+                <img src="assets/pictures/carte_hangman_00.png" alt="photo_hangman">
             </section>
-            <section class="ligneClavier">
-                <button class="touchesClavier">Q</button>
-                <button class="touchesClavier">S</button>
-                <button class="touchesClavier">D</button>
-                <button class="touchesClavier">F</button>
-                <button class="touchesClavier">G</button>
-                <button class="touchesClavier">H</button>
-                <button class="touchesClavier">J</button>
-                <button class="touchesClavier">K</button>
-                <button class="touchesClavier">L</button>
-                <button class="touchesClavier">M</button>
+            <section class="clavier">
+                <button class="btnKeyboard">A</button>
+                <button class="btnKeyboard">Z</button>
+                <button class="btnKeyboard">E</button>
+                <button class="btnKeyboard">R</button>
+                <button class="btnKeyboard">T</button>
+                <button class="btnKeyboard">Y</button>
+                <button class="btnKeyboard">U</button>
+                <button class="btnKeyboard">I</button>
+                <button class="btnKeyboard">O</button>
+                <button class="btnKeyboard">P</button>
+                <button class="btnKeyboard">Q</button>
+                <button class="btnKeyboard">S</button>
+                <button class="btnKeyboard">D</button>
+                <button class="btnKeyboard">F</button>
+                <button class="btnKeyboard">G</button>
+                <button class="btnKeyboard">H</button>
+                <button class="btnKeyboard">J</button>
+                <button class="btnKeyboard">K</button>
+                <button class="btnKeyboard">L</button>
+                <button class="btnKeyboard">M</button>
+                <button class="btnDeco">Shift</button>
+                <button class="btnKeyboard">W</button>
+                <button class="btnKeyboard">X</button>
+                <button class="btnKeyboard">C</button>
+                <button class="btnKeyboard">V</button>
+                <button class="btnKeyboard">B</button>
+                <button class="btnKeyboard">N</button>
+                <button class="btnDeco">Del</button>
+                <button id="start" class="start">Nouvelle partie</button>
             </section>
-            <section class="ligneClavier">
-                <button class="clear">Shift</button>
-                <button class="touchesClavier">W</button>
-                <button class="touchesClavier">X</button>
-                <button class="touchesClavier">C</button>
-                <button class="touchesClavier">V</button>
-                <button class="touchesClavier">B</button>
-                <button class="touchesClavier">N</button>
-                <button class="delete">Del</button>
-            </section>
-            <section class="ligneClavier">
-                <button id="confirmer">Nouvelle partie</button>
+            <section class="decompte">
+                <p id="coeur1" class="carte">&#x2665;</p>
+                <p id="count" class="carte">6</p>
+                <p id="coeur2" class="carte">&#x2665;</p>
             </section>
         </section>
 
     </section>
+    <script src="assets/scripts/config.js"></script>
+    <script src="assets/scripts/script.js"></script>
+    <script src="assets/scripts/main.js"></script>
+    
 </body>
 </html>

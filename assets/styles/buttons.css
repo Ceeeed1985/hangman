@@ -1,6 +1,6 @@
-button{
+/* button{
     padding: 10px;
-    min-width: 50px;
+    min-width: 10%;
     background-color: white;
     border: 1px solid grey;
     border-radius: 5px;
@@ -9,62 +9,6 @@ button{
 
 button:hover{
     background-color: #e5e5dc;
-}
-
-.btnListeFilms {
-    border: #264653 2px solid;
-    border-radius: 15px;
-    color: #264653;
-}
-
-.btnListeFilms:hover {
-    background-color: #264653;
-    color: white;
-    border: 2px white solid;
-}
-.btnListePersonnages {
-    border: #2a9d8f 2px solid;
-    border-radius: 15px;
-    color: #2a9d8f;
-}
-
-.btnListePersonnages:hover {
-    background-color: #2a9d8f;
-    color: white;
-    border: 2px white solid;
-}
-.btnListeAnimaux {
-    border: #e9c46a 2px solid;
-    border-radius: 15px;
-    color: #e9c46a;
-}
-
-.btnListeAnimaux:hover {
-    background-color: #e9c46a;
-    color: white;
-    border: 2px white solid;
-}
-.btnListeMots {
-    border: #f4a261 2px solid;
-    border-radius: 15px;
-    color: #f4a261;
-}
-
-.btnListeMots:hover {
-    background-color: #f4a261;
-    color: white;
-    border: 2px white solid;
-}
-.btnListeVerbes {
-    border: #e76f51 2px solid;
-    border-radius: 15px;
-    color: #e76f51;
-}
-
-.btnListeVerbes:hover {
-    background-color: #e76f51;
-    color: white;
-    border: 2px white solid;
 }
 
 .missed {
@@ -76,4 +20,4 @@ button:hover{
 .succes {
     background-color: #2a9d8f;
     color: white;
-}
+} */
