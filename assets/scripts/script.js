@@ -54,6 +54,8 @@ function resetGame(){
     tableauScoreElement.classList.remove("decompte4", "decompte3", "decompte2", "decompte1", "gameOver", "defaultClass");
 
     hiddenWordElement.innerHTML = dashWord;
+
+    hiddenWordElement.classList.remove("bravo");
 }
 
 chooseWord(movieList);
