@@ -89,6 +89,10 @@ button:hover{
 
 .cartePendu{
     width: 20%;
+    /* border: 0px solid #2a9d8f;
+    border-radius: 15px; */
+    /* box-shadow: 3px 3px 15px 1px #2a9d8f; */
+
 }
 
 .decompte{
@@ -167,11 +171,25 @@ button:hover{
 
 img {
     width: 100%;
-    border: 1px solid grey;
+    border: 0px solid grey;
     border-radius: 15px;
-    box-shadow: 3px 3px 15px 1px;
+    box-shadow: 3px 3px 15px 1px #2a9d8f;
 }
-
+.img4 {
+    box-shadow: 3px 3px 15px 1px #e9c46a;
+}
+.img3 {
+    box-shadow: 3px 3px 15px 1px #e9c46a;
+}
+.img2 {
+    box-shadow: 3px 3px 15px 1px #f4a261;
+}
+.img1 {
+    box-shadow: 3px 3px 15px 1px #e76f51;
+}
+.img0 {
+    box-shadow: 3px 3px 15px 1px #1f1e1e;
+}
 
 .hiddenWord{
     color: white;

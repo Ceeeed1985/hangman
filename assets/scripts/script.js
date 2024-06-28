@@ -65,23 +65,32 @@ buttons.forEach(button =>{
 
             switch(count){
                 case 5:
-                    cartePenduElement.src = "assets/pictures/carte_count_5.png";
+                    cartePenduElement.src = "assets/pictures/carte_hangman_05.png";
+                    cartePenduElement.classList.add("img5");
                     break;
                 case 4:
-                    cartePenduElement.src = "assets/pictures/carte_count_4.png";
+                    cartePenduElement.src = "assets/pictures/carte_hangman_04.png";
+                    cartePenduElement.classList.add("img4");
                     tableauScoreElement.classList.add("decompte4");
                     break;
                 case 3:
-                    cartePenduElement.src = "assets/pictures/carte_count_3.png";
+                    cartePenduElement.src = "assets/pictures/carte_hangman_03.png";
+                    cartePenduElement.classList.add("img3");
                     tableauScoreElement.classList.add("decompte3");
                     break;
                 case 2:
+                    cartePenduElement.src = "assets/pictures/carte_hangman_02.png";
+                    cartePenduElement.classList.add("img2");
                     tableauScoreElement.classList.add("decompte2");
                     break;
                 case 1:
+                    cartePenduElement.src = "assets/pictures/carte_hangman_01.png";
+                    cartePenduElement.classList.add("img1");
                     tableauScoreElement.classList.add("decompte1");
                     break;
                 case 0:
+                    cartePenduElement.src = "assets/pictures/carte_hangman_00.png";
+                    cartePenduElement.classList.add("img0");
                     tableauScoreElement.classList.add("gameOver");
                     hiddenWordElement.innerHTML = "GAME OVER";
                     buttons.forEach(btn => btn.disabled = true);
