@@ -8,7 +8,6 @@ let countElement = document.getElementById("count");
 let count = parseInt(countElement.textContent);
 let tableauScoreElement = document.getElementById("tableauScore");
 let cartePenduElement = document.querySelector("#cartePendu img");
-console.log(cartePenduElement);
 let choosenLetter;
 
 
