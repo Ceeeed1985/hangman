@@ -166,8 +166,6 @@ button:hover{
 }
 
 
-
-
 .start {
     border: #2a9d8f 2px solid;
     border-radius: 15px;
@@ -234,6 +232,11 @@ h4{
     color: #2a9d8f;
 }
 
+.bravo{
+    font-size: 60px;
+    color: #2a9d8f;
+}
+
 .nombreDeVies{
     display:none;
 }
@@ -289,7 +292,7 @@ h4{
         color: #2a9d8f;
     }
 
-    .vies.orange {
+    .viesOranges {
         color: #e76f51;
     }
 
@@ -354,5 +357,8 @@ h4{
     h4{
         font-size: 20px;
     }
-
+    .bravo{
+        font-size: 24px;
+        color: #2a9d8f;
+    }
 }

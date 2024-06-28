@@ -1,3 +1,5 @@
+///////////////////////// MES VARIABLES /////////////////////////
+
 let wordToGuess;
 let wordLength;
 let dashWord = "";
@@ -5,31 +7,58 @@ const hiddenWordElement = document.getElementById("hiddenWord");
 const buttons = document.querySelectorAll(".btnKeyboard");
 const unusedButtons = document.querySelectorAll(".btnDeco");
 const vieElements = document.querySelectorAll(".vies");
+const startButton = document.getElementById("start");
+startButton.addEventListener("click", resetGame);
 let countElement = document.getElementById("count");
 let count = parseInt(countElement.textContent);
 let tableauScoreElement = document.getElementById("tableauScore");
 let cartePenduElement = document.querySelector("#cartePendu img");
-// let start = document.getElementById("start");
 let choosenLetter;
 
 
+///////////////////////// MES FONCTIONS /////////////////////////
+
+//Chercher un mot dans un tableau
 function chooseWord (array){
-let randomIndex = Math.floor(Math.random() * array.length);
-wordToGuess = (array[randomIndex]);
-wordLength = wordToGuess.length;
-dashWord = "_".repeat(wordLength);
+    let randomIndex = Math.floor(Math.random() * array.length);
+    wordToGuess = (array[randomIndex]);
+    wordLength = wordToGuess.length;
+    dashWord = "_".repeat(wordLength);
 }
 
+
+//Fonction pour ajouter une class à des éléments afin d'animer ces mêmes éléments
 function addAnimation(element, animationClass){
     element.classList.remove("animate__animated", animationClass);
     void element.offsetWidth;
     element.classList.add("animate__animated", animationClass);
 }
 
+function resetGame(){
+    count = 6;
+    countElement.textContent = count;
+
+    chooseWord(movieList);
+    dashWord = "_".repeat(wordLength);
+    hiddenWordElement.innerHTML = dashWord;
+
+    cartePenduElement.src = "assets/pictures/carte_hangman_06.png";
+
+    buttons.forEach(btn => {
+        btn.classList.remove("success", "missed");
+        btn.disabled = false;
+    });
+
+    vieElements.forEach(vie => vie.classList.remove("viesOranges"));
+
+    tableauScoreElement.classList.remove("decompte4", "decompte3", "decompte2", "decompte1", "gameOver", "defaultClass");
+
+    hiddenWordElement.innerHTML = dashWord;
+}
+
 chooseWord(movieList);
 hiddenWordElement.innerHTML = dashWord;
 hiddenWordElement.classList.add("hiddenWord");
-
 
 
 unusedButtons.forEach(unusedButton => {
@@ -40,13 +69,14 @@ unusedButtons.forEach(unusedButton => {
 
 buttons.forEach(button =>{
     button.addEventListener("click", () => {
-        choosenLetter = button.textContent;
+        choosenLetter = button.textContent.toLowerCase();
         let newDashWord = "";
         let foundLetter = false;
 
-        for (let i = 0; i < wordToGuess.length; i++){
-            if (wordToGuess[i].toLowerCase() === choosenLetter.toLowerCase()){
-                newDashWord += choosenLetter;
+        for (let i = 0; i < wordToGuess.length; i++) {
+            let targetLetter = wordToGuess[i].toLowerCase();
+            if (targetLetter === choosenLetter) {
+                newDashWord += wordToGuess[i];
                 button.classList.add("success");
                 foundLetter = true;
             } else {
@@ -54,7 +84,7 @@ buttons.forEach(button =>{
             }  
         }
 
-        if(!foundLetter){
+        if(!foundLetter) {
             button.classList.add("missed");
             count-= 1;
             countElement.textContent = count;
@@ -63,37 +93,40 @@ buttons.forEach(button =>{
             addAnimation(cartePenduElement, "animate__bounceInLeft");
 
             tableauScoreElement.classList.remove("decompte4", "decompte3", "decompte2", "decompte1", "gameOver", "defaultClass");
-            if (count >= 0) {
-                vieElements[count].classList.add('orange');
-            }
 
             switch(count){
                 case 5:
                     cartePenduElement.src = "assets/pictures/carte_hangman_05.png";
+                    document.getElementById("vie06").classList.add("viesOranges");
                     cartePenduElement.classList.add("img5");
                     break;
                 case 4:
                     cartePenduElement.src = "assets/pictures/carte_hangman_04.png";
+                    document.getElementById("vie05").classList.add("viesOranges");
                     cartePenduElement.classList.add("img4");
                     tableauScoreElement.classList.add("decompte4");
                     break;
                 case 3:
                     cartePenduElement.src = "assets/pictures/carte_hangman_03.png";
+                    document.getElementById("vie04").classList.add("viesOranges");
                     cartePenduElement.classList.add("img3");
                     tableauScoreElement.classList.add("decompte3");
                     break;
                 case 2:
                     cartePenduElement.src = "assets/pictures/carte_hangman_02.png";
+                    document.getElementById("vie03").classList.add("viesOranges");
                     cartePenduElement.classList.add("img2");
                     tableauScoreElement.classList.add("decompte2");
                     break;
                 case 1:
                     cartePenduElement.src = "assets/pictures/carte_hangman_01.png";
+                    document.getElementById("vie02").classList.add("viesOranges");
                     cartePenduElement.classList.add("img1");
                     tableauScoreElement.classList.add("decompte1");
                     break;
                 case 0:
                     cartePenduElement.src = "assets/pictures/carte_hangman_00.png";
+                    document.getElementById("vie01").classList.add("viesOranges");
                     cartePenduElement.classList.add("img0");
                     tableauScoreElement.classList.add("gameOver");
                     hiddenWordElement.innerHTML = `
@@ -101,7 +134,6 @@ buttons.forEach(button =>{
                     <h3>Le bon film :</h3>
                     <h4>${wordToGuess}</h4>
                     `
-                    // "GAME OVER\n Votre film : \n" + wordToGuess;
                     buttons.forEach(btn => btn.disabled = true);
                     return;
                 default:
@@ -110,19 +142,24 @@ buttons.forEach(button =>{
            
         }
 
-        if (newDashWord === wordToGuess) {
-            hiddenWordElement.innerHTML = "Bravo!";
-            buttons.forEach(btn => btn.disabled = true);
-            return; // Sortie de la fonction si le jeu est gagné
-        }
-
         dashWord = newDashWord;
         hiddenWordElement.innerHTML = dashWord;
 
-        
-    })
 
-})
+        if (dashWord === wordToGuess) {
+            hiddenWordElement.classList.add("bravo");
+            hiddenWordElement.innerHTML = "Bravo!";
+            console.log(hiddenWordElement);
+            buttons.forEach(btn => btn.disabled = true);
+            return;
+        }
+
+ 
+
+        
+    });
+
+});
 
 
 
