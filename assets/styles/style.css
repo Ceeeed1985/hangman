@@ -219,13 +219,21 @@ h1{
 }
 
 h2{
-    font-size: 24px;
+    font-size: 60px;
+    color: #e76f51;
+    font-weight: bolder;
     }
     
 h3{
-    font-size: 36px;
+    font-size: 48px;
     letter-spacing: 12px;
     }
+
+h4{
+    font-size: 36px;
+    color: #2a9d8f;
+}
+
 .nombreDeVies{
     display:none;
 }
@@ -281,6 +289,10 @@ h3{
         color: #2a9d8f;
     }
 
+    .vies.orange {
+        color: #e76f51;
+    }
+
     .control{
         width: 100%;
         display: flex;
@@ -331,4 +343,16 @@ h3{
         letter-spacing: 0.5em;
     }
     
+    h2{
+        font-size: 24px;
+        }
+        
+    h3{
+        font-size: 16px;
+        }
+    
+    h4{
+        font-size: 20px;
+    }
+
 }

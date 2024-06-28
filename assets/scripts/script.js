@@ -4,10 +4,12 @@ let dashWord = "";
 const hiddenWordElement = document.getElementById("hiddenWord");
 const buttons = document.querySelectorAll(".btnKeyboard");
 const unusedButtons = document.querySelectorAll(".btnDeco");
+const vieElements = document.querySelectorAll(".vies");
 let countElement = document.getElementById("count");
 let count = parseInt(countElement.textContent);
 let tableauScoreElement = document.getElementById("tableauScore");
 let cartePenduElement = document.querySelector("#cartePendu img");
+// let start = document.getElementById("start");
 let choosenLetter;
 
 
@@ -61,6 +63,9 @@ buttons.forEach(button =>{
             addAnimation(cartePenduElement, "animate__bounceInLeft");
 
             tableauScoreElement.classList.remove("decompte4", "decompte3", "decompte2", "decompte1", "gameOver", "defaultClass");
+            if (count >= 0) {
+                vieElements[count].classList.add('orange');
+            }
 
             switch(count){
                 case 5:
@@ -91,7 +96,12 @@ buttons.forEach(button =>{
                     cartePenduElement.src = "assets/pictures/carte_hangman_00.png";
                     cartePenduElement.classList.add("img0");
                     tableauScoreElement.classList.add("gameOver");
-                    hiddenWordElement.innerHTML = "GAME OVER";
+                    hiddenWordElement.innerHTML = `
+                    <h2><strong>GAME OVER</strong></h2>
+                    <h3>Le bon film :</h3>
+                    <h4>${wordToGuess}</h4>
+                    `
+                    // "GAME OVER\n Votre film : \n" + wordToGuess;
                     buttons.forEach(btn => btn.disabled = true);
                     return;
                 default:
