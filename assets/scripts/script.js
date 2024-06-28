@@ -3,7 +3,10 @@ let wordLength;
 let dashWord = "";
 const hiddenWordElement = document.getElementById("hiddenWord");
 const buttons = document.querySelectorAll(".btnKeyboard");
-const unusedButtons = document.querySelectorAll(".btnDeco")
+const unusedButtons = document.querySelectorAll(".btnDeco");
+//JE DOIS ECRIRE CES DEUX LIGNES CONVENABLEMENT - A VERIFIER !!!!!!
+// let count = document.getElementById("count");
+// console.log(count);
 let choosenLetter;
 
 
@@ -42,6 +45,7 @@ buttons.forEach(button =>{
             } else {
                 newDashWord += dashWord[i];
                 button.classList.add("missed");
+
             }
         }
         dashWord = newDashWord;
