@@ -109,6 +109,27 @@ button:hover{
     color: #2a9d8f;
 }
 
+.decompte4,
+.decompte3{
+    color: #e9c46a;
+}
+
+.decompte2{
+    color: #f4a261;
+}
+
+.decompte1{
+    color: #e76f51;
+}
+
+.gameOver{
+    color: #1f1e1e;
+}
+
+.defaultClass{
+    color: #2a9d8f;
+}
+
 #count{
     font-size: 10em;
     align-items: center;
