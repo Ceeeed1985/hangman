@@ -15,8 +15,6 @@ let tableauScoreElement = document.getElementById("tableauScore");
 let cartePenduElement = document.querySelector("#cartePendu img");
 let choosenLetter;
 
-let prenom = prompt("Bonjour et bienvenu dans ce jeu du pendu, basé sur le cinéma !\n\nTout d'abords, comment t'appelles-tu ?")
-
 
 ///////////////////////// MES FONCTIONS /////////////////////////
 
@@ -152,7 +150,7 @@ buttons.forEach(button =>{
 
         if (dashWord === wordToGuess) {
             hiddenWordElement.classList.add("bravo");
-            hiddenWordElement.innerHTML = "Bravo " + prenom + " !";
+            hiddenWordElement.innerHTML = "Bravo !";
             console.log(hiddenWordElement);
             buttons.forEach(btn => btn.disabled = true);
             return;
